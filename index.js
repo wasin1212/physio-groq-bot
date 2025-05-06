@@ -12,7 +12,7 @@ const LINE_REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply';
 
 async function askChatGPT(message) {
   const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
-    model: 'mixtral-8x7b-32768',
+    model: 'mixtral-8x7b-instruct',
     messages: [{ role: 'user', content: message }],
     temperature: 0.7
   }, {
